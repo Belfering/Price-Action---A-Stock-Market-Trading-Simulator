@@ -1,0 +1,108 @@
+# Advanced optional Python requirements - install when you need the bigger toys
+#
+# Install:
+#   python -m pip install -r requirements-advanced.txt
+#
+# Fresh-computer note:
+#   Install requirements.txt first. This file includes larger packages and
+#   project-specific tools that can take longer to install or may prefer
+#   Python 3.12 over the newest Python release.
+
+# AI / LLM APIs
+openai>=1.0
+anthropic>=0.34
+google-generativeai>=0.7
+google-genai>=1.0
+cohere>=5.5
+instructor>=1.3
+tiktoken>=0.7
+
+# LLM apps / retrieval / vector search
+langchain>=0.2
+langchain-community>=0.2
+llama-index>=0.10
+chromadb>=0.5
+faiss-cpu>=1.8
+sentence-transformers>=3.0
+
+# Deep learning
+torch>=2.3
+torchvision>=0.18
+torchaudio>=2.3
+transformers>=4.42
+datasets>=2.20
+accelerate>=0.31
+evaluate>=0.4
+
+# Computer vision / image processing
+opencv-python>=4.10
+pillow>=10.3
+scikit-image>=0.24
+imageio>=2.34
+
+# Audio / speech
+soundfile>=0.12
+librosa>=0.10
+pydub>=0.25
+
+# Advanced data engineering
+dask>=2024.5
+ray>=2.24
+prefect>=2.19
+great-expectations>=0.18
+dbt-core>=1.8,<1.11
+
+# Cloud / storage SDKs
+boto3>=1.34
+azure-storage-blob>=12.20
+google-cloud-storage>=2.16
+s3fs>=2024.5
+fsspec>=2024.5
+
+# More databases / search
+elasticsearch>=8.14
+qdrant-client>=1.9
+weaviate-client>=4.6
+neo4j>=5.20
+
+# Web frameworks / production servers
+django>=5.0
+gunicorn>=22.0
+celery>=5.4
+flower>=2.0
+
+# App packaging / desktop apps
+pyinstaller>=6.8
+briefcase>=0.3
+pywebview>=5.1
+
+# Docs / reports
+mkdocs>=1.6
+mkdocs-material>=9.5
+reportlab>=4.2
+python-docx>=1.1
+pypdf>=4.2
+
+# Security / auth / crypto
+cryptography>=42.0
+protobuf<6
+passlib[bcrypt]>=1.7
+python-jose[cryptography]>=3.3
+
+# More testing / quality
+hypothesis>=6.102
+tox>=4.15
+nox>=2024.4
+coverage>=7.5
+
+# Infrastructure helpers
+docker>=7.1
+kubernetes>=29.0
+fabric>=3.2
+invoke>=2.2
+
+# Finance / quantitative research
+vectorbt>=0.26
+pyfolio-reloaded>=0.9
+riskfolio-lib>=6.0
+QuantLib>=1.34

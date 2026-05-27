@@ -1,0 +1,53 @@
+# Convenience extras for a fresh development machine
+#
+# Install after requirements.txt and requirements-advanced.txt:
+#   python -m pip install -r requirements-convenience.txt
+
+# Package/build workflow
+pip-tools>=7.4
+pipdeptree>=2.23
+twine>=5.1
+hatch>=1.12
+
+# Better REPL / terminal workflow
+ptpython>=3.0
+questionary>=2.0
+loguru>=0.7
+structlog>=24.2
+
+# VS Code / editor-friendly language tooling
+python-lsp-server[all]>=1.11
+debugpy>=1.8
+
+# More data formats and performance helpers
+h5py>=3.11
+tables>=3.9
+zarr>=2.18
+fastparquet>=2024.5
+numexpr>=2.10
+
+# More database connectors
+pyodbc>=5.1
+mysql-connector-python>=9.0
+
+# Web app conveniences
+python-socketio>=5.11
+python-multipart>=0.0.9
+email-validator>=2.2
+
+# Job queues / scheduling
+apscheduler>=3.10
+schedule>=1.2
+
+# Monitoring / diagnostics
+sentry-sdk>=2.8
+memory-profiler>=0.61
+line-profiler>=4.1
+
+# File watching and filesystem helpers
+watchdog>=4.0
+pathvalidate>=3.2
+
+# Maps / geospatial starter tools
+folium>=0.17
+geopy>=2.4

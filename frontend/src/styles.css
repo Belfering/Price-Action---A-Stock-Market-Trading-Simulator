@@ -1,0 +1,579 @@
+:root {
+  color: #e7e1d6;
+  background: #151515;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(33, 31, 27, 0.96), rgba(18, 18, 18, 1)),
+    #151515;
+}
+
+body.controller-cursor-active,
+body.controller-cursor-active * {
+  cursor: none !important;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  min-height: 44px;
+  border: 1px solid #4b4031;
+  border-radius: 8px;
+  color: #f4eee2;
+  background: #27241f;
+  cursor: pointer;
+  transition: border-color 140ms ease, background 140ms ease, transform 140ms ease;
+}
+
+button:hover:not(:disabled) {
+  border-color: #d4a64f;
+  background: #312b22;
+}
+
+button.controller-hover:not(:disabled),
+input.controller-hover,
+select.controller-hover,
+textarea.controller-hover,
+a.controller-hover {
+  outline: 2px solid #f2c94c;
+  outline-offset: 3px;
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+button.primary,
+.menu-action.primary,
+.cta {
+  background: #1e6b43;
+  border-color: #38c172;
+}
+
+button.ghost {
+  background: transparent;
+  border-color: #5b5144;
+  min-width: 84px;
+}
+
+button.selected {
+  border-color: #d4a64f;
+  background: #493719;
+}
+
+button.buy {
+  border-color: #38c172;
+  background: #183d2b;
+}
+
+button.sell {
+  border-color: #e45649;
+  background: #44211e;
+}
+
+button.danger {
+  border-color: #e45649;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #4b4031;
+  border-radius: 8px;
+  color: #f4eee2;
+  background: #1c1b18;
+  padding: 0 12px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: #bdb4a5;
+  font-size: 0.88rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 11px 10px;
+  border-bottom: 1px solid #3a342b;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  color: #bdb4a5;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.app-shell {
+  width: min(1440px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.topbar,
+.section-heading,
+.game-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.topbar {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #3a342b;
+}
+
+.eyebrow {
+  color: #d4a64f;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 4px;
+  font-size: clamp(2rem, 5vw, 4.6rem);
+  line-height: 0.95;
+}
+
+h2 {
+  font-size: clamp(1.35rem, 3vw, 2.2rem);
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+.status-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.status-strip span,
+.reveal-band span,
+.reveal-band strong {
+  border: 1px solid #4b4031;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #1d1b18;
+  color: #d8d3c8;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 16px 0;
+  padding: 12px;
+  border: 1px solid #e45649;
+  border-radius: 8px;
+  background: #3b1f1d;
+}
+
+.alert button {
+  min-height: 34px;
+  padding: 0 12px;
+}
+
+.menu-layout {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(140px, 1fr));
+  gap: 12px;
+  padding-top: 24px;
+}
+
+.menu-action {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 10px;
+  min-height: 128px;
+  padding: 18px;
+  font-weight: 700;
+}
+
+.setup-layout,
+.settings-layout,
+.history-layout,
+.score-layout,
+.game-layout {
+  display: grid;
+  gap: 18px;
+  padding-top: 22px;
+}
+
+.setup-grid,
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.capital-row,
+.timeframe-tabs,
+.indicator-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.capital-row button,
+.timeframe-tabs button,
+.indicator-row button {
+  min-width: 76px;
+  padding: 0 14px;
+}
+
+.empty-state {
+  display: none;
+  border: 1px solid #4b4031;
+  border-radius: 8px;
+  padding: 14px;
+  color: #d8d3c8;
+  background: #1c1b18;
+}
+
+.empty-state[data-active="true"] {
+  display: block;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: min(360px, 100%);
+  min-height: 54px;
+  font-weight: 800;
+}
+
+.stats-grid,
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.score-grid {
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+}
+
+.metric {
+  display: grid;
+  gap: 6px;
+  min-height: 72px;
+  padding: 12px;
+  border: 1px solid #3a342b;
+  border-radius: 8px;
+  background: #1c1b18;
+}
+
+.metric span {
+  color: #afa697;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+}
+
+.metric strong {
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  overflow-wrap: anywhere;
+}
+
+.metric.good strong {
+  color: #6ce29c;
+}
+
+.metric.bad strong {
+  color: #ff867c;
+}
+
+.metric.warn strong {
+  color: #d4a64f;
+}
+
+.chart-surface {
+  width: 100%;
+  height: min(58vh, 620px);
+  min-height: 420px;
+  border: 1px solid #3a342b;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #151515;
+}
+
+.trade-controls {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(118px, 1fr));
+  gap: 10px;
+}
+
+.trade-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 58px;
+  padding: 0 12px;
+  font-weight: 800;
+}
+
+.trade-log,
+.history-layout table,
+.score-layout table {
+  border: 1px solid #3a342b;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #1c1b18;
+}
+
+.trade-log h3,
+.trade-log p {
+  padding: 12px;
+}
+
+.reveal-band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.binding-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.binding-section {
+  display: grid;
+  gap: 12px;
+}
+
+.controller-binding {
+  display: grid;
+  gap: 7px;
+  color: #bdb4a5;
+  font-size: 0.88rem;
+}
+
+.controller-binding-tile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 48px;
+  padding: 6px 10px;
+}
+
+.controller-binding-tile.listening {
+  border-color: #f2c94c;
+  background: #493719;
+  box-shadow: 0 0 0 3px rgba(242, 201, 76, 0.14);
+}
+
+.controller-listening {
+  color: #f2c94c;
+  font-weight: 800;
+}
+
+.binding-clear {
+  min-height: 32px;
+  width: max-content;
+  padding: 0 10px;
+  color: #bdb4a5;
+  background: transparent;
+}
+
+.controller-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f4eee2;
+  font-weight: 900;
+}
+
+.controller-chip.empty {
+  color: #877c6b;
+  font-weight: 700;
+}
+
+.controller-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 28px;
+  border: 1px solid #d4a64f;
+  border-radius: 7px;
+  background: #11100f;
+  color: #f4eee2;
+  line-height: 1;
+}
+
+.controller-chip.face .controller-glyph {
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  border-radius: 999px;
+}
+
+.controller-chip.playstation.face .controller-glyph {
+  color: #e8f2ff;
+}
+
+.controller-chip.shoulder .controller-glyph {
+  min-width: 46px;
+  border-radius: 12px 12px 7px 7px;
+}
+
+.controller-chip.system .controller-glyph,
+.controller-chip.stick .controller-glyph,
+.controller-chip.dpad .controller-glyph {
+  min-width: 54px;
+}
+
+.controller-name {
+  color: #bdb4a5;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+}
+
+.check-row input {
+  width: 18px;
+  min-height: 18px;
+}
+
+.virtual-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f2c94c;
+  border-radius: 999px;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: 0 0 0 4px rgba(242, 201, 76, 0.18);
+  transition: opacity 120ms ease, width 80ms ease, height 80ms ease;
+}
+
+.virtual-cursor::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: #f2c94c;
+  transform: translate(-50%, -50%);
+}
+
+.virtual-cursor.visible {
+  opacity: 1;
+}
+
+.virtual-cursor.pressed {
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 0 0 7px rgba(242, 201, 76, 0.25);
+}
+
+@media (max-width: 1100px) {
+  .menu-layout,
+  .setup-grid,
+  .settings-grid {
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
+
+  .stats-grid,
+  .score-grid,
+  .trade-controls,
+  .binding-grid {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .topbar,
+  .section-heading,
+  .game-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .status-strip {
+    justify-content: flex-start;
+  }
+
+  .menu-layout,
+  .setup-grid,
+  .settings-grid,
+  .stats-grid,
+  .score-grid,
+  .trade-controls,
+  .binding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-surface {
+    min-height: 340px;
+  }
+
+  th,
+  td {
+    white-space: normal;
+  }
+}
