@@ -39,6 +39,7 @@ Thumbs.db
 
 # Large future data drops. The small checked-in SPY prototype parquet remains at repo root.
 data/
+Data Download.py
 *_1min_candles.parquet
 *.parquet.bak
 *.xlsx
