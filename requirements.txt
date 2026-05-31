@@ -30,6 +30,7 @@ pydantic>=2.6
 pydantic-settings>=2.2
 PyYAML>=6.0
 toml>=0.10
+bcrypt>=4.1
 
 # Charts and visualization
 matplotlib>=3.8

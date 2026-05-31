@@ -13,7 +13,10 @@
 - Do not commit secrets. API keys must come from environment variables such as `FMP_API_KEY`.
 - Do not commit generated artifacts, logs, virtual environments, `node_modules`, or large future data drops under `data/`.
 - Preserve the small root-level `spy_1min_candles.parquet` unless the user asks to replace the prototype dataset.
-- Prefer targeted changes and verify with `python -m pytest backend` and `npm run build` when backend/frontend behavior changes.
+- Prefer targeted changes and verify with lint plus tests/build before handing work back:
+  - Python/backend changes: `python -m ruff check backend test *.py` and `python -m pytest backend`.
+  - Frontend changes: `npm run lint` and `npm run build` from `frontend/`.
+  - If a lint command cannot run because tooling is missing, install/fix the tooling or clearly report the blocker.
 
 ## Local Run Commands
 ```powershell
